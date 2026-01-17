@@ -146,4 +146,7 @@ export interface AtomState<Value = unknown> {
   // 1. Storing the current value
   // 2. Tracking dependencies between atoms
   // 3. Notifying subscribers when values change
+  currentValue: Value;
+  dependencies: Set<Atom<unknown>>;
+  dependents: Set<Atom<unknown>>;
 }
